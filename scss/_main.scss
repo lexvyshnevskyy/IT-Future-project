@@ -1,0 +1,33 @@
+section.main{
+	margin-top: 6em;
+	background: url(../img/gamada.png) no-repeat;
+	background-size: contain;
+	.container{
+		background-size: contain;
+		position: relative;
+		overflow: hidden;
+	}
+	.img{
+		position: absolute;
+		z-index: -1;
+		top:0;
+		right: -10em;
+	}
+	.title{
+	  text-transform: capitalize;
+	}
+	.subtitle{
+		text-transform: uppercase;
+	}
+	.split{
+		background-position: right;
+	}
+}
+@media (max-width: 768px){
+	section.main{
+		margin-top: 5em;
+		.img{
+			display: none;
+		}
+	}
+}

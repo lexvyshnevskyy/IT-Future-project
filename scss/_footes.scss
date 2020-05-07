@@ -1,0 +1,40 @@
+footer{
+	.container{
+		@include flexbox;
+		@include flex-wrap(wrap);
+		@include align-items(center);
+		@include flex-direction(row);
+		@include justify-content(space-between);
+		padding: 1em;
+		max-width: 90em;
+		margin: auto;
+	}
+	.copywrite{
+		padding-right: 1em;
+		span{
+			display: block;
+			font-family: $hncr;
+			&.company_title{
+				font-weight: bold;
+			}
+		}
+	}
+	.social_links{
+		a{
+			@include em((
+				padding-right: 30px
+			), $base-font-size);
+		}
+	}
+}
+@media (max-width: 640px){
+	footer{
+		.copywrite{
+			margin-bottom: 1em;
+		}
+		.social_links{
+			width: 100%;
+			text-align: center;
+		}
+	}
+}

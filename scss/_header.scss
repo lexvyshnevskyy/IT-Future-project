@@ -1,0 +1,57 @@
+header{
+	background: $header_fon;
+	&.sticky {
+	    position: fixed;
+	    top: 0;
+	    width: 100%;
+	    z-index: 5;
+	}
+	.container{
+		padding: 0;
+	   	@include flex-direction(row);
+	    @include justify-content(center);
+    }
+	nav.menu{
+		@include flexbox;
+		@include justify-content(center);
+		a{
+			display: block;
+			font-family: $hncr;
+			white-space: nowrap;
+			color: $header_color;
+			@include em((
+				padding-top:35px,
+				padding-bottom:35px,
+				padding-left:60px,
+				padding-right:60px
+			),$base-font-size);
+			&.active{
+				color: #3d3d3d;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px){
+	header{
+		nav.menu{
+			a{
+				@include em((
+					padding-top:35px,
+					padding-bottom:35px,
+					padding-left: 10px,
+					padding-right: 10px
+				),$base-font-size);
+			}
+		}
+	}
+}
+@media (max-width: 425px){
+	header{
+		nav.menu{
+			a{
+				font-size: em(15px, $base-font-size);
+			}
+		}
+	}
+}
